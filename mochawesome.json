@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 1,
-    "passes": 0,
+    "tests": 2,
+    "passes": 1,
     "pending": 0,
     "failures": 1,
-    "start": "2023-02-09T11:31:26.665Z",
-    "end": "2023-02-09T11:31:42.022Z",
-    "duration": 15357,
+    "start": "2023-02-09T11:55:41.062Z",
+    "end": "2023-02-09T12:00:17.437Z",
+    "duration": 276375,
     "testsRegistered": 11,
-    "passPercent": 0,
+    "passPercent": 9.090909090909092,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
-    "skipped": 10,
+    "skipped": 9,
     "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "5c95c4ac-a0bc-478b-b2a1-104d5c2cdefa",
+      "uuid": "b6ebf06f-3372-4412-84c8-fa62fbfebe36",
       "title": "",
       "fullFile": "cypress/e2e/web/home.cy.js",
       "file": "cypress/e2e/web/home.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "6391566d-d61e-48d7-ae0f-5d2dc0c2b05b",
+          "uuid": "669c866d-f844-4d24-a920-76a82a0804c6",
           "title": "Homepage-tests-web",
           "fullFile": "",
           "file": "",
@@ -38,21 +38,17 @@
               "title": "should open iddaa.com home page",
               "fullTitle": "Homepage-tests-web should open iddaa.com home page",
               "timedOut": null,
-              "duration": 15215,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 274291,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "const url = cy.url();\nurl.should(\"eq\", IDDAA_URL);",
-              "err": {
-                "message": "CypressError: Timed out after waiting `15000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `15000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `home/runner/work/cypressReport/cypressReport/cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Homepage-tests-web`",
-                "estack": "CypressError: Timed out after waiting `15000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `15000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `home/runner/work/cypressReport/cypressReport/cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Homepage-tests-web`\n    at timedOutWaitingForPageLoad (https://www.iddaa.com/__cypress/runner/cypress_runner.js:141075:72)\n    at <unknown> (https://www.iddaa.com/__cypress/runner/cypress_runner.js:142255:16)\n    at tryCatcher (https://www.iddaa.com/__cypress/runner/cypress_runner.js:11318:23)\n    at <unknown> (https://www.iddaa.com/__cypress/runner/cypress_runner.js:6440:41)\n    at tryCatcher (https://www.iddaa.com/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (https://www.iddaa.com/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (https://www.iddaa.com/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (https://www.iddaa.com/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (https://www.iddaa.com/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (https://www.iddaa.com/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (https://www.iddaa.com/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://www.iddaa.com/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (https://www.iddaa.com/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/web/home.cy.js:11:11)",
-                "diff": null
-              },
-              "uuid": "6cdf7e13-55c4-40ea-a488-6c8cf40df7ba",
-              "parentUUID": "6391566d-d61e-48d7-ae0f-5d2dc0c2b05b",
+              "err": {},
+              "uuid": "6b4830ae-101d-4b8c-a9eb-59ead6921226",
+              "parentUUID": "669c866d-f844-4d24-a920-76a82a0804c6",
               "isHook": false,
               "skipped": false
             },
@@ -60,19 +56,23 @@
               "title": "should exist main slider",
               "fullTitle": "Homepage-tests-web should exist main slider",
               "timedOut": null,
-              "duration": 0,
-              "state": "skipped",
+              "duration": 1803,
+              "state": "failed",
               "speed": null,
               "pass": false,
-              "fail": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "const slider = cy.get('[data-comp-name=\"slider-item\"]');\nslider.should(\"be.visible\").should(\"exist\");",
-              "err": {},
-              "uuid": "0ed630cd-3235-48fd-a5d0-eb453b1c4d2e",
-              "parentUUID": "6391566d-d61e-48d7-ae0f-5d2dc0c2b05b",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 1000ms: Expected to find element: `[aria-label=\"Kapat\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Homepage-tests-web`",
+                "estack": "AssertionError: Timed out retrying after 1000ms: Expected to find element: `[aria-label=\"Kapat\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Homepage-tests-web`\n    at Context.eval (webpack:///./cypress/e2e/web/home.cy.js:11:14)",
+                "diff": null
+              },
+              "uuid": "4f4d1360-9cc1-47b2-afb9-f7f8b6fcb34c",
+              "parentUUID": "669c866d-f844-4d24-a920-76a82a0804c6",
               "isHook": false,
-              "skipped": true
+              "skipped": false
             },
             {
               "title": "should have title on iddaa home page",
@@ -87,8 +87,8 @@
               "context": null,
               "code": "const title = cy.title();\ntitle.should(\"not.be.empty\");\ntitle.should(\"eq\", \"İddaa - En İyi, En Güvenilir Yasal Canlı Bahis Sitesi İddaa.com İle Canlı Kupon Yapın\");",
               "err": {},
-              "uuid": "936f2c59-5dc5-413a-bebc-c3a696a4433c",
-              "parentUUID": "6391566d-d61e-48d7-ae0f-5d2dc0c2b05b",
+              "uuid": "8aa4ef39-5ca6-43a4-8aee-3ea1d0ac3a6d",
+              "parentUUID": "669c866d-f844-4d24-a920-76a82a0804c6",
               "isHook": false,
               "skipped": true
             },
@@ -105,8 +105,8 @@
               "context": null,
               "code": "const title = cy.title();\ntitle.should(\"not.be.empty\").and(\"eq\", \"İddaa - En İyi, En Güvenilir Yasal Canlı Bahis Sitesi İddaa.com İle Canlı Kupon Yapın\").and(\"have.length.greaterThan\", 10);",
               "err": {},
-              "uuid": "e50d8aeb-f4c7-4f6f-b7d9-153379c164e3",
-              "parentUUID": "6391566d-d61e-48d7-ae0f-5d2dc0c2b05b",
+              "uuid": "87a6d73b-9b69-4025-858e-d27333c46c5a",
+              "parentUUID": "669c866d-f844-4d24-a920-76a82a0804c6",
               "isHook": false,
               "skipped": true
             },
@@ -123,8 +123,8 @@
               "context": null,
               "code": "cy.scrollTo(0, 500);\ncy.window().its(\"scrollY\").should(\"eq\", 500);",
               "err": {},
-              "uuid": "3e8c89b6-80a6-4e73-91dd-d67a36fe9c65",
-              "parentUUID": "6391566d-d61e-48d7-ae0f-5d2dc0c2b05b",
+              "uuid": "7f74f74c-8859-44e7-9dfe-3f67e0c9cb7e",
+              "parentUUID": "669c866d-f844-4d24-a920-76a82a0804c6",
               "isHook": false,
               "skipped": true
             },
@@ -141,8 +141,8 @@
               "context": null,
               "code": "cy.get('[data-comp-name=\"mainMenu-live-button\"]').should(\"have.attr\", \"href\", \"/program/canli/futbol\");",
               "err": {},
-              "uuid": "93dd7cd0-366c-46b4-9f7a-597a2e146e6d",
-              "parentUUID": "6391566d-d61e-48d7-ae0f-5d2dc0c2b05b",
+              "uuid": "50ef9ae5-b418-4d7c-b6e6-37ad4410d05a",
+              "parentUUID": "669c866d-f844-4d24-a920-76a82a0804c6",
               "isHook": false,
               "skipped": true
             },
@@ -159,8 +159,8 @@
               "context": null,
               "code": "cy.get('[data-comp-name=\"mainMenu-live-button\"]').invoke(\"attr\", \"href\").then(href => {\n  expect(href).to.equal(\"/program/canli/futbol\");\n});",
               "err": {},
-              "uuid": "b43e2cfe-b21d-4dd4-8041-9b472769457d",
-              "parentUUID": "6391566d-d61e-48d7-ae0f-5d2dc0c2b05b",
+              "uuid": "da878909-c129-470a-832b-5c1388e95835",
+              "parentUUID": "669c866d-f844-4d24-a920-76a82a0804c6",
               "isHook": false,
               "skipped": true
             },
@@ -177,8 +177,8 @@
               "context": null,
               "code": "cy.get('[data-comp-name=\"mainMenu-live-button\"] > div').contains(\"CANLI\");",
               "err": {},
-              "uuid": "7ef13d42-1155-4c17-8c52-00e68e706e8b",
-              "parentUUID": "6391566d-d61e-48d7-ae0f-5d2dc0c2b05b",
+              "uuid": "6fe17073-31f5-40b1-a9e5-5d9017945e23",
+              "parentUUID": "669c866d-f844-4d24-a920-76a82a0804c6",
               "isHook": false,
               "skipped": true
             },
@@ -195,8 +195,8 @@
               "context": null,
               "code": "cy.get('[data-comp-name=\"shortProgram-button\"]').should(\"exist\");",
               "err": {},
-              "uuid": "1c1cd182-512b-414d-b131-291601478b1f",
-              "parentUUID": "6391566d-d61e-48d7-ae0f-5d2dc0c2b05b",
+              "uuid": "b7184104-ccf1-4075-94e7-8094a3b772fd",
+              "parentUUID": "669c866d-f844-4d24-a920-76a82a0804c6",
               "isHook": false,
               "skipped": true
             },
@@ -213,8 +213,8 @@
               "context": null,
               "code": "cy.get('[data-comp-name=\"shortProgram-button\"] > a').should(\"have.attr\", \"href\", \"/program/canli/futbol\");",
               "err": {},
-              "uuid": "a80c6425-4a81-4dbe-8146-d88be592b19c",
-              "parentUUID": "6391566d-d61e-48d7-ae0f-5d2dc0c2b05b",
+              "uuid": "793dad0e-0519-4944-9b90-f0eb0470735d",
+              "parentUUID": "669c866d-f844-4d24-a920-76a82a0804c6",
               "isHook": false,
               "skipped": true
             },
@@ -231,31 +231,32 @@
               "context": null,
               "code": "const button = cy.get('[data-comp-name=\"shortProgram-button\"]');\nbutton.click();\ncy.url().should(\"include\", \"/program/canli/futbol\");",
               "err": {},
-              "uuid": "7289dd58-c5d2-4b39-827f-21a424777aad",
-              "parentUUID": "6391566d-d61e-48d7-ae0f-5d2dc0c2b05b",
+              "uuid": "67154a6d-60c0-4096-b896-ae40af75868d",
+              "parentUUID": "669c866d-f844-4d24-a920-76a82a0804c6",
               "isHook": false,
               "skipped": true
             }
           ],
           "suites": [],
-          "passes": [],
+          "passes": [
+            "6b4830ae-101d-4b8c-a9eb-59ead6921226"
+          ],
           "failures": [
-            "6cdf7e13-55c4-40ea-a488-6c8cf40df7ba"
+            "4f4d1360-9cc1-47b2-afb9-f7f8b6fcb34c"
           ],
           "pending": [],
           "skipped": [
-            "0ed630cd-3235-48fd-a5d0-eb453b1c4d2e",
-            "936f2c59-5dc5-413a-bebc-c3a696a4433c",
-            "e50d8aeb-f4c7-4f6f-b7d9-153379c164e3",
-            "3e8c89b6-80a6-4e73-91dd-d67a36fe9c65",
-            "93dd7cd0-366c-46b4-9f7a-597a2e146e6d",
-            "b43e2cfe-b21d-4dd4-8041-9b472769457d",
-            "7ef13d42-1155-4c17-8c52-00e68e706e8b",
-            "1c1cd182-512b-414d-b131-291601478b1f",
-            "a80c6425-4a81-4dbe-8146-d88be592b19c",
-            "7289dd58-c5d2-4b39-827f-21a424777aad"
+            "8aa4ef39-5ca6-43a4-8aee-3ea1d0ac3a6d",
+            "87a6d73b-9b69-4025-858e-d27333c46c5a",
+            "7f74f74c-8859-44e7-9dfe-3f67e0c9cb7e",
+            "50ef9ae5-b418-4d7c-b6e6-37ad4410d05a",
+            "da878909-c129-470a-832b-5c1388e95835",
+            "6fe17073-31f5-40b1-a9e5-5d9017945e23",
+            "b7184104-ccf1-4075-94e7-8094a3b772fd",
+            "793dad0e-0519-4944-9b90-f0eb0470735d",
+            "67154a6d-60c0-4096-b896-ae40af75868d"
           ],
-          "duration": 15215,
+          "duration": 276094,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

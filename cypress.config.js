@@ -10,7 +10,7 @@ module.exports = defineConfig({
     pageLoadTimeout: 120e3,
     responseTimeout: 120e3,
     e2e: {
-        baseUrl: 'https://www.iddaa.com',
+        baseUrl: 'https://www.iddaa.com/',
         setupNodeEvents(on, config) {
             return require('./cypress/plugins/index.js')(on, config)
         },

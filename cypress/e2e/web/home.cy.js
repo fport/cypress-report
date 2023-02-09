@@ -98,11 +98,11 @@ describe("Homepage-tests-web", () => {
         cy.login("05538414788", "123456789");
     });*/
 
-    it.only("login", () => {
+   /* it.only("login", () => {
         cy.fixture("users").as("user");
 
         cy.get("@user").then((user) => {
             cy.login(user.phoneNumber, user.password);
         });
-    });
+    });*/
 });

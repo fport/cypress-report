@@ -5,11 +5,10 @@ const IDDAA_URL = "https://www.iddaa.com/";
 describe("Homepage-tests-web", () => {
     before(() => {
         cy.viewport(1920, 1080);
+        cy.visit(IDDAA_URL);
     });
 
     beforeEach(() => {
-        cy.visit(IDDAA_URL);
-
         const popup = cy.get('[aria-label="Kapat"]');
         popup.should("be.visible").click({force: true, multiple: true});
     });

@@ -24,8 +24,9 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+/*
 Cypress.Commands.add("login", (phoneNumber, password) => {
     cy.get('[data-comp-name="loginForm-phoneNumber-input"]').should("be.visible").type(phoneNumber);
     cy.get('[data-comp-name="loginForm-password-input"]').should("be.visible").type(password);
     cy.get('[data-comp-name="loginForm-login-button"]').should("be.visible").click();
-});
+});*/

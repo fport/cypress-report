@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/murillowelsi/cypress-api-tutorial.git"
+    "url": "git+https://github.com/fport/cypressReport"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/murillowelsi/cypress-api-tutorial/issues"
+    "url": "https://github.com/fport/cypressReport/issues"
   },
-  "homepage": "https://github.com/murillowelsi/cypress-api-tutorial#readme",
+  "homepage": "https://github.com/fport/cypressReport#readme",
   "devDependencies": {
     "cypress-multi-reporters": "^1.6.0",
     "faker": "^5.5.3",

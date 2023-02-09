@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 1,
-    "tests": 1,
+    "suites": 3,
+    "tests": 2,
     "passes": 1,
     "pending": 0,
-    "failures": 0,
-    "start": "2023-02-09T10:59:25.013Z",
-    "end": "2023-02-09T10:59:25.076Z",
-    "duration": 63,
-    "testsRegistered": 1,
-    "passPercent": 100,
+    "failures": 1,
+    "start": "2023-02-09T11:06:42.669Z",
+    "end": "2023-02-09T11:06:43.038Z",
+    "duration": 369,
+    "testsRegistered": 2,
+    "passPercent": 50,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "474861ca-488d-4595-817b-52a14d129e66",
+      "uuid": "1e6498b8-d4a0-48de-8772-4df9934d0eeb",
       "title": "",
       "fullFile": "cypress/e2e/web/home.cy.js",
       "file": "cypress/e2e/web/home.cy.js",
@@ -27,40 +27,102 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "ed81ef94-3b6d-416a-9d0f-de321e31c01e",
+          "uuid": "0b7308f4-577d-4089-9591-091ef7e5dab1",
           "title": "My First Test",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
-          "tests": [
+          "tests": [],
+          "suites": [
             {
-              "title": "Does not do much!",
-              "fullTitle": "My First Test Does not do much!",
-              "timedOut": null,
-              "duration": 41,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "expect(true).to.equal(true);",
-              "err": {},
-              "uuid": "3790b2a7-7656-4720-a2e8-0d1176a9eeb6",
-              "parentUUID": "ed81ef94-3b6d-416a-9d0f-de321e31c01e",
-              "isHook": false,
-              "skipped": false
+              "uuid": "4b99ba91-f13d-4253-bf15-6b0854056660",
+              "title": "Pass Test",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Does not do much!",
+                  "fullTitle": "My First Test Pass Test Does not do much!",
+                  "timedOut": null,
+                  "duration": 42,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "expect(true).to.equal(true);",
+                  "err": {},
+                  "uuid": "7cae8669-0692-4ec5-8b63-9c2b9c0a5010",
+                  "parentUUID": "4b99ba91-f13d-4253-bf15-6b0854056660",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "7cae8669-0692-4ec5-8b63-9c2b9c0a5010"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 42,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "b3c3684a-6d9f-4263-b46c-74a8bea5740e",
+              "title": "Fail Test",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Does not do much!",
+                  "fullTitle": "My First Test Fail Test Does not do much!",
+                  "timedOut": null,
+                  "duration": 262,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "expect(true).to.equal(false);",
+                  "err": {
+                    "message": "AssertionError: expected true to equal false",
+                    "estack": "AssertionError: expected true to equal false\n    at Context.eval (webpack:///./cypress/e2e/web/home.cy.js:11:28)",
+                    "diff": null
+                  },
+                  "uuid": "b5471b7f-2c40-4fec-b51d-c7cdb11a5b2f",
+                  "parentUUID": "b3c3684a-6d9f-4263-b46c-74a8bea5740e",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "b5471b7f-2c40-4fec-b51d-c7cdb11a5b2f"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 262,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
             }
           ],
-          "suites": [],
-          "passes": [
-            "3790b2a7-7656-4720-a2e8-0d1176a9eeb6"
-          ],
+          "passes": [],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 41,
+          "duration": 0,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

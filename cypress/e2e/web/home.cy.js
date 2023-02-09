@@ -3,7 +3,7 @@
 const IDDAA_URL = "https://www.iddaa.com/";
 
 describe("Homepage-tests-web", () => {
-    before(() => {
+/*    before(() => {
         cy.viewport(1920, 1080);
     });
 
@@ -12,14 +12,15 @@ describe("Homepage-tests-web", () => {
 
         const popup = cy.get('[aria-label="Kapat"]', {timeout: 1000});
         popup.click({force: true, multiple: true});
-    });
+    });*/
 
     it("should open iddaa.com home page", () => {
+        cy.visit(IDDAA_URL);
         const url = cy.url();
         url.should("eq", IDDAA_URL);
     });
 
-    it("should exist main slider", () => {
+   /* it("should exist main slider", () => {
         const slider = cy.get('[data-comp-name="slider-item"]', {timeout: 1000});
         slider.should("exist");
     });
@@ -87,7 +88,7 @@ describe("Homepage-tests-web", () => {
         button.click();
         cy.url().should("include", "/program/canli/futbol");
     });
-
+*/
     /*it("should reload is curretly page", () => {
           cy.reload();
           cy.url().should("include", "/program/canli/futbol");

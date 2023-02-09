@@ -17,8 +17,6 @@ jobs:
       - name: Cypress run 🧪
         uses: cypress-io/github-action@v3
         continue-on-error: true
-        with:
-          record: true
 
       - run: npm run report:merge
       - run: npm run report:mocha

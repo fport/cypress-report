@@ -8,19 +8,11 @@ on:
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: [ 14, 16, 18 ]
     permissions:
       contents: write 
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
-      - name: Cypress install
-        uses: cypress-io/github-action@v4
-        with:
-          node-version: ${{ matrix.node }}
 
       - name: Cypress run 🧪
         uses: cypress-io/github-action@v3

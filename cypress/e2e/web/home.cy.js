@@ -1,5 +1,4 @@
 /// <reference types="cypress" />
-/* eslint-disable */
 
 const IDDAA_URL = "https://www.iddaa.com/";
 
@@ -9,10 +8,10 @@ describe("Homepage-tests-web", () => {
     });
 
     beforeEach(() => {
-        cy.visit("/");
+        cy.visit(IDDAA_URL);
 
-        const popup = cy.get('[aria-label="Kapat"]', {timeout: 1000});
-        popup.click({force: true, multiple: true});
+        const popup = cy.get('[aria-label="Kapat"]');
+        popup.should("be.visible").click({force: true, multiple: true});
     });
 
     it("should open iddaa.com home page", () => {
@@ -21,8 +20,8 @@ describe("Homepage-tests-web", () => {
     });
 
     it("should exist main slider", () => {
-        const slider = cy.get('[data-comp-name="slider-item"]', {timeout: 1000});
-        slider.should("exist");
+        const slider = cy.get('[data-comp-name="slider-item"]');
+        slider.should("be.visible").should("exist");
     });
 
     it("should have title on iddaa home page", () => {

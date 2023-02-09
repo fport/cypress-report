@@ -1,7 +1,6 @@
 const {defineConfig} = require('cypress')
 
 module.exports = defineConfig({
-    video: false,
     reporter: 'cypress-multi-reporters',
     reporterOptions: {
         configFile: 'reporter-config.json',
@@ -11,6 +10,7 @@ module.exports = defineConfig({
     responseTimeout: 120e3,
     e2e: {
         baseUrl: 'https://www.iddaa.com/',
+        testIsolation: false,
         setupNodeEvents(on, config) {
             return require('./cypress/plugins/index.js')(on, config)
         },

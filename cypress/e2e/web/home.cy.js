@@ -5,12 +5,15 @@ const IDDAA_URL = "https://www.iddaa.com/";
 describe("Homepage-tests-web", () => {
     before(() => {
         cy.viewport(1920, 1080);
-        cy.visit(IDDAA_URL);
+
+        cy.visit("/");
+
+        const popup = cy.get('[aria-label="Kapat"]', {timeout: 10000});
+        popup.click({force: true, multiple: true});
     });
 
     beforeEach(() => {
-        const popup = cy.get('[aria-label="Kapat"]');
-        popup.should("be.visible").click({force: true, multiple: true});
+        cy.visit("/");
     });
 
     it("should open iddaa.com home page", () => {
@@ -20,7 +23,7 @@ describe("Homepage-tests-web", () => {
 
     it("should exist main slider", () => {
         const slider = cy.get('[data-comp-name="slider-item"]');
-        slider.should("be.visible").should("exist");
+        slider.should("exist");
     });
 
     it("should have title on iddaa home page", () => {

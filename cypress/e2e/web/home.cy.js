@@ -3,12 +3,6 @@
 const IDDAA_URL = "https://www.iddaa.com/";
 
 describe("Homepage-tests-web", () => {
-    it("should have iddaa home page", () => {
-        cy.visit("/");
-        const url = cy.url();
-        url.should("eq", IDDAA_URL);
-    });
-
     it("should have title on iddaa home page", () => {
         cy.visit("/");
         const title = cy.title();

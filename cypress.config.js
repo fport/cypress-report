@@ -1,6 +1,7 @@
 const {defineConfig} = require('cypress')
 
 module.exports = defineConfig({
+    video: false,
     reporter: 'cypress-multi-reporters',
     reporterOptions: {
         configFile: 'reporter-config.json',

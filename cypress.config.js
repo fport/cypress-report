@@ -1,19 +1,18 @@
-const { defineConfig } = require('cypress')
+const {defineConfig} = require('cypress')
 
 module.exports = defineConfig({
-  video: false,
-  reporter: 'cypress-multi-reporters',
-  reporterOptions: {
-    configFile: 'reporter-config.json',
-  },
-  timeout: 15000,
-  pageLoadTimeout: 15000,
-  e2e: {
-    // We've imported your old cypress plugins here.
-    // You may want to clean this up later by importing these.
-    setupNodeEvents(on, config) {
-      return require('./cypress/plugins/index.js')(on, config)
+    video: false,
+    reporter: 'cypress-multi-reporters',
+    reporterOptions: {
+        configFile: 'reporter-config.json',
     },
-    baseUrl: 'https://www.iddaa.com',
-  },
+    timeout: 120e3,
+    pageLoadTimeout: 120e3,
+    responseTimeout: 120e3,
+    e2e: {
+        baseUrl: 'https://www.iddaa.com',
+        setupNodeEvents(on, config) {
+            return require('./cypress/plugins/index.js')(on, config)
+        },
+    },
 })

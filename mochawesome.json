@@ -1,14 +1,14 @@
 {
   "stats": {
-    "suites": 2,
-    "tests": 1,
-    "passes": 1,
+    "suites": 3,
+    "tests": 2,
+    "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2023-02-09T10:28:38.059Z",
-    "end": "2023-02-09T10:28:38.281Z",
-    "duration": 222,
-    "testsRegistered": 1,
+    "start": "2023-02-09T10:56:26.822Z",
+    "end": "2023-02-09T10:56:31.027Z",
+    "duration": 4205,
+    "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,17 +18,17 @@
   },
   "results": [
     {
-      "uuid": "80ebe04d-290d-4924-b084-1f4abcdc84ee",
+      "uuid": "1d1a85ef-84d5-432f-8c1f-72bbed3bc57f",
       "title": "",
-      "fullFile": "cypress/e2e/Carrinhos/GET-carts.cy.js",
-      "file": "cypress/e2e/Carrinhos/GET-carts.cy.js",
+      "fullFile": "cypress/e2e/web/home.cy.js",
+      "file": "cypress/e2e/web/home.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "da2451dd-0c72-4a51-b0c5-c1311774b6e5",
-          "title": "Given the carts api",
+          "uuid": "839b3b27-bd2e-445e-aa1c-f5552ae2bcb3",
+          "title": "Given the users api",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
@@ -36,40 +36,79 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "402c1bfc-1b09-4eae-8fc1-9f9859284ac0",
-              "title": "When I send GET /carrinhos",
+              "uuid": "d1e3aef2-f65e-4b8e-989d-727e199e3413",
+              "title": "When I send GET /usuarios",
               "fullFile": "",
               "file": "",
               "beforeHooks": [],
               "afterHooks": [],
               "tests": [
                 {
-                  "title": "Then it should return a list with all registered products",
-                  "fullTitle": "Given the carts api When I send GET /carrinhos Then it should return a list with all registered products",
+                  "title": "Then it should return a list with all registered users",
+                  "fullTitle": "Given the users api When I send GET /usuarios Then it should return a list with all registered users",
                   "timedOut": null,
-                  "duration": 183,
+                  "duration": 3999,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
-                  "code": "cy.api({\n  method: \"GET\",\n  url: \"/carrinhos\"\n}).should(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.quantidade).to.eq(response.body.carrinhos.length);\n});",
+                  "code": "cy.api({\n  method: \"GET\",\n  url: \"/usuarios\"\n}).should(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.quantidade).to.eq(response.body.usuarios.length);\n  Cypress._.each(response.body.usuarios, usuario => {\n    expect(usuario.email).to.not.be.null;\n    expect(usuario).to.have.all.keys(\"nome\", \"email\", \"password\", \"administrador\", \"_id\");\n  });\n});",
                   "err": {},
-                  "uuid": "56bbaf22-7367-4cef-ac91-fe51ba453890",
-                  "parentUUID": "402c1bfc-1b09-4eae-8fc1-9f9859284ac0",
+                  "uuid": "cde48e99-fa8c-461a-b685-4755c42f5982",
+                  "parentUUID": "d1e3aef2-f65e-4b8e-989d-727e199e3413",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "56bbaf22-7367-4cef-ac91-fe51ba453890"
+                "cde48e99-fa8c-461a-b685-4755c42f5982"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 183,
+              "duration": 3999,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "0162876d-d45a-44f0-be4c-2e5b30858f66",
+              "title": "When I send GET /usuarios passing id query param",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Then it should return only the filtered user",
+                  "fullTitle": "Given the users api When I send GET /usuarios passing id query param Then it should return only the filtered user",
+                  "timedOut": null,
+                  "duration": 127,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.api({\n  method: \"GET\",\n  url: \"/usuarios\",\n  qs: {\n    _id: \"0uxuPY0cbmQhpEz1\"\n  }\n}).should(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.usuarios[0].nome).to.eq(\"Fulano da Silva\");\n});",
+                  "err": {},
+                  "uuid": "c427dfc7-0bb5-4566-a3cc-68742eea5584",
+                  "parentUUID": "0162876d-d45a-44f0-be4c-2e5b30858f66",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "c427dfc7-0bb5-4566-a3cc-68742eea5584"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 127,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cy:open": "npx cypress open",
-    "cy:run": "npx cypress run --headless --browser chrome",
+    "cy:run": "npx cypress run --headless",
     "report:merge": "mochawesome-merge > index.json",
     "report:mocha": "marge index.json",
     "report:clean": "rimraf mochawesome-report index.js"

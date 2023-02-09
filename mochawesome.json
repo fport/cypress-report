@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2023-02-09T12:54:14.164Z",
-    "end": "2023-02-09T12:54:30.469Z",
-    "duration": 16305,
+    "start": "2023-02-09T12:59:49.569Z",
+    "end": "2023-02-09T13:01:49.914Z",
+    "duration": 120345,
     "testsRegistered": 11,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "8654268c-1ce7-48a4-9eb2-4cc57c2bcca5",
+      "uuid": "a41044e4-62a0-43b0-a9f9-aa706b360912",
       "title": "",
       "fullFile": "cypress/e2e/web/home.cy.js",
       "file": "cypress/e2e/web/home.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "4f0ec6d1-d2f6-48e5-8cde-c9afd794d4e0",
+          "uuid": "34491210-ca73-4d03-a4fa-c6a1081ae42a",
           "title": "Homepage-tests-web",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "should open iddaa.com home page",
               "fullTitle": "Homepage-tests-web should open iddaa.com home page",
               "timedOut": null,
-              "duration": 16153,
+              "duration": 120255,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -47,12 +47,12 @@
               "context": null,
               "code": "const url = cy.url();\nurl.should(\"eq\", IDDAA_URL);",
               "err": {
-                "message": "CypressError: Timed out after waiting `15000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `15000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `home/runner/work/cypressReport/cypressReport/cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Homepage-tests-web`",
-                "estack": "CypressError: Timed out after waiting `15000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `15000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `home/runner/work/cypressReport/cypressReport/cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Homepage-tests-web`\n    at timedOutWaitingForPageLoad (https://www.iddaa.com/__cypress/runner/cypress_runner.js:141075:72)\n    at <unknown> (https://www.iddaa.com/__cypress/runner/cypress_runner.js:142255:16)\n    at tryCatcher (https://www.iddaa.com/__cypress/runner/cypress_runner.js:11318:23)\n    at <unknown> (https://www.iddaa.com/__cypress/runner/cypress_runner.js:6440:41)\n    at tryCatcher (https://www.iddaa.com/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (https://www.iddaa.com/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (https://www.iddaa.com/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (https://www.iddaa.com/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (https://www.iddaa.com/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (https://www.iddaa.com/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (https://www.iddaa.com/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://www.iddaa.com/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (https://www.iddaa.com/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/web/home.cy.js:8:11)",
+                "message": "CypressError: Timed out after waiting `120000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `120000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `home/runner/work/cypressReport/cypressReport/cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Homepage-tests-web`",
+                "estack": "CypressError: Timed out after waiting `120000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `120000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `home/runner/work/cypressReport/cypressReport/cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Homepage-tests-web`\n    at timedOutWaitingForPageLoad (https://www.iddaa.com/__cypress/runner/cypress_runner.js:141075:72)\n    at <unknown> (https://www.iddaa.com/__cypress/runner/cypress_runner.js:142255:16)\n    at tryCatcher (https://www.iddaa.com/__cypress/runner/cypress_runner.js:11318:23)\n    at <unknown> (https://www.iddaa.com/__cypress/runner/cypress_runner.js:6440:41)\n    at tryCatcher (https://www.iddaa.com/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (https://www.iddaa.com/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (https://www.iddaa.com/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (https://www.iddaa.com/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (https://www.iddaa.com/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (https://www.iddaa.com/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (https://www.iddaa.com/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://www.iddaa.com/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (https://www.iddaa.com/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/web/home.cy.js:8:11)",
                 "diff": null
               },
-              "uuid": "47d58bc1-a817-4326-843a-7a3cb87a9799",
-              "parentUUID": "4f0ec6d1-d2f6-48e5-8cde-c9afd794d4e0",
+              "uuid": "52bcd543-4899-429b-a5b9-eba7495895b6",
+              "parentUUID": "34491210-ca73-4d03-a4fa-c6a1081ae42a",
               "isHook": false,
               "skipped": false
             },
@@ -69,8 +69,8 @@
               "context": null,
               "code": "const slider = cy.get('[data-comp-name=\"slider-item\"]');\nslider.should(\"be.visible\").should(\"exist\");",
               "err": {},
-              "uuid": "7436b084-6d7b-4207-a169-c50677869c08",
-              "parentUUID": "4f0ec6d1-d2f6-48e5-8cde-c9afd794d4e0",
+              "uuid": "dfeb8d7c-9eee-408f-88e3-6cd11d114116",
+              "parentUUID": "34491210-ca73-4d03-a4fa-c6a1081ae42a",
               "isHook": false,
               "skipped": true
             },
@@ -87,8 +87,8 @@
               "context": null,
               "code": "const title = cy.title();\ntitle.should(\"not.be.empty\");\ntitle.should(\"eq\", \"İddaa - En İyi, En Güvenilir Yasal Canlı Bahis Sitesi İddaa.com İle Canlı Kupon Yapın\");",
               "err": {},
-              "uuid": "d40bd5c0-90f8-4487-b652-76ff19442edd",
-              "parentUUID": "4f0ec6d1-d2f6-48e5-8cde-c9afd794d4e0",
+              "uuid": "4729de5a-7f52-49cf-9481-523279ad8993",
+              "parentUUID": "34491210-ca73-4d03-a4fa-c6a1081ae42a",
               "isHook": false,
               "skipped": true
             },
@@ -105,8 +105,8 @@
               "context": null,
               "code": "const title = cy.title();\ntitle.should(\"not.be.empty\").and(\"eq\", \"İddaa - En İyi, En Güvenilir Yasal Canlı Bahis Sitesi İddaa.com İle Canlı Kupon Yapın\").and(\"have.length.greaterThan\", 10);",
               "err": {},
-              "uuid": "d0274cbc-9ba9-4c3b-9ee6-e92d8678b78f",
-              "parentUUID": "4f0ec6d1-d2f6-48e5-8cde-c9afd794d4e0",
+              "uuid": "c2f26079-06d9-42fc-a5e0-5a179980f53b",
+              "parentUUID": "34491210-ca73-4d03-a4fa-c6a1081ae42a",
               "isHook": false,
               "skipped": true
             },
@@ -123,8 +123,8 @@
               "context": null,
               "code": "cy.scrollTo(0, 500);\ncy.window().its(\"scrollY\").should(\"eq\", 500);",
               "err": {},
-              "uuid": "01a33244-cce9-421e-bce4-a91afe2d25b1",
-              "parentUUID": "4f0ec6d1-d2f6-48e5-8cde-c9afd794d4e0",
+              "uuid": "746ff80d-6c6d-4df3-88f3-ab89d0e1b263",
+              "parentUUID": "34491210-ca73-4d03-a4fa-c6a1081ae42a",
               "isHook": false,
               "skipped": true
             },
@@ -141,8 +141,8 @@
               "context": null,
               "code": "cy.get('[data-comp-name=\"mainMenu-live-button\"]').should(\"have.attr\", \"href\", \"/program/canli/futbol\");",
               "err": {},
-              "uuid": "19fb3c6f-94c8-4463-b80e-298514d1c376",
-              "parentUUID": "4f0ec6d1-d2f6-48e5-8cde-c9afd794d4e0",
+              "uuid": "8662a4e4-e13b-4671-8afc-6f2ef9344199",
+              "parentUUID": "34491210-ca73-4d03-a4fa-c6a1081ae42a",
               "isHook": false,
               "skipped": true
             },
@@ -159,8 +159,8 @@
               "context": null,
               "code": "cy.get('[data-comp-name=\"mainMenu-live-button\"]').invoke(\"attr\", \"href\").then(href => {\n  expect(href).to.equal(\"/program/canli/futbol\");\n});",
               "err": {},
-              "uuid": "fc4c6c3e-e490-4145-9c3f-80c253c36235",
-              "parentUUID": "4f0ec6d1-d2f6-48e5-8cde-c9afd794d4e0",
+              "uuid": "c98c533c-2820-4eea-af68-3d30fe58e4b8",
+              "parentUUID": "34491210-ca73-4d03-a4fa-c6a1081ae42a",
               "isHook": false,
               "skipped": true
             },
@@ -177,8 +177,8 @@
               "context": null,
               "code": "cy.get('[data-comp-name=\"mainMenu-live-button\"] > div').contains(\"CANLI\");",
               "err": {},
-              "uuid": "ff15d5e4-790b-443b-868d-65fc0d340398",
-              "parentUUID": "4f0ec6d1-d2f6-48e5-8cde-c9afd794d4e0",
+              "uuid": "fdf3ebfc-aca8-47f0-82c1-47a5421722e0",
+              "parentUUID": "34491210-ca73-4d03-a4fa-c6a1081ae42a",
               "isHook": false,
               "skipped": true
             },
@@ -195,8 +195,8 @@
               "context": null,
               "code": "cy.get('[data-comp-name=\"shortProgram-button\"]').should(\"exist\");",
               "err": {},
-              "uuid": "82040b06-4826-47b3-a586-cb3201ed6096",
-              "parentUUID": "4f0ec6d1-d2f6-48e5-8cde-c9afd794d4e0",
+              "uuid": "e83c747a-719c-4d07-ae5a-a84a8e258880",
+              "parentUUID": "34491210-ca73-4d03-a4fa-c6a1081ae42a",
               "isHook": false,
               "skipped": true
             },
@@ -213,8 +213,8 @@
               "context": null,
               "code": "cy.get('[data-comp-name=\"shortProgram-button\"] > a').should(\"have.attr\", \"href\", \"/program/canli/futbol\");",
               "err": {},
-              "uuid": "67b95cdb-c434-49fc-8e5d-1bd2f5565f59",
-              "parentUUID": "4f0ec6d1-d2f6-48e5-8cde-c9afd794d4e0",
+              "uuid": "d90d66d8-4466-400d-a933-c648e5d0a36b",
+              "parentUUID": "34491210-ca73-4d03-a4fa-c6a1081ae42a",
               "isHook": false,
               "skipped": true
             },
@@ -231,8 +231,8 @@
               "context": null,
               "code": "const button = cy.get('[data-comp-name=\"shortProgram-button\"]');\nbutton.click();\ncy.url().should(\"include\", \"/program/canli/futbol\");",
               "err": {},
-              "uuid": "033f4bc4-0a32-4a27-8b15-ad86aaa4ebe6",
-              "parentUUID": "4f0ec6d1-d2f6-48e5-8cde-c9afd794d4e0",
+              "uuid": "853b5f2d-8622-4be3-9edd-bf641a5636c7",
+              "parentUUID": "34491210-ca73-4d03-a4fa-c6a1081ae42a",
               "isHook": false,
               "skipped": true
             }
@@ -240,22 +240,22 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "47d58bc1-a817-4326-843a-7a3cb87a9799"
+            "52bcd543-4899-429b-a5b9-eba7495895b6"
           ],
           "pending": [],
           "skipped": [
-            "7436b084-6d7b-4207-a169-c50677869c08",
-            "d40bd5c0-90f8-4487-b652-76ff19442edd",
-            "d0274cbc-9ba9-4c3b-9ee6-e92d8678b78f",
-            "01a33244-cce9-421e-bce4-a91afe2d25b1",
-            "19fb3c6f-94c8-4463-b80e-298514d1c376",
-            "fc4c6c3e-e490-4145-9c3f-80c253c36235",
-            "ff15d5e4-790b-443b-868d-65fc0d340398",
-            "82040b06-4826-47b3-a586-cb3201ed6096",
-            "67b95cdb-c434-49fc-8e5d-1bd2f5565f59",
-            "033f4bc4-0a32-4a27-8b15-ad86aaa4ebe6"
+            "dfeb8d7c-9eee-408f-88e3-6cd11d114116",
+            "4729de5a-7f52-49cf-9481-523279ad8993",
+            "c2f26079-06d9-42fc-a5e0-5a179980f53b",
+            "746ff80d-6c6d-4df3-88f3-ab89d0e1b263",
+            "8662a4e4-e13b-4671-8afc-6f2ef9344199",
+            "c98c533c-2820-4eea-af68-3d30fe58e4b8",
+            "fdf3ebfc-aca8-47f0-82c1-47a5421722e0",
+            "e83c747a-719c-4d07-ae5a-a84a8e258880",
+            "d90d66d8-4466-400d-a933-c648e5d0a36b",
+            "853b5f2d-8622-4be3-9edd-bf641a5636c7"
           ],
-          "duration": 16153,
+          "duration": 120255,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

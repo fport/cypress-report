@@ -12,6 +12,6 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       return require('./cypress/plugins/index.js')(on, config)
     },
-    baseUrl: 'https://serverest.dev',
+    baseUrl: 'baseUrl: "https://www.iddaa.com',
   },
 })

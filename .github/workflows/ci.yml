@@ -13,11 +13,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-         token: ${{ secrets.token_with_access_to_drun }}
-         repository: gridpoint-com/gpec-drun
-         ref: main
-         path: bin
 
       - name: Cypress run 🧪
         uses: cypress-io/github-action@v3

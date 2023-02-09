@@ -1,14 +1,14 @@
 {
   "stats": {
-    "suites": 3,
-    "tests": 2,
-    "passes": 2,
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-02-09T10:56:26.822Z",
-    "end": "2023-02-09T10:56:31.027Z",
-    "duration": 4205,
-    "testsRegistered": 2,
+    "start": "2023-02-09T10:59:25.013Z",
+    "end": "2023-02-09T10:59:25.076Z",
+    "duration": 63,
+    "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "1d1a85ef-84d5-432f-8c1f-72bbed3bc57f",
+      "uuid": "474861ca-488d-4595-817b-52a14d129e66",
       "title": "",
       "fullFile": "cypress/e2e/web/home.cy.js",
       "file": "cypress/e2e/web/home.cy.js",
@@ -27,98 +27,40 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "839b3b27-bd2e-445e-aa1c-f5552ae2bcb3",
-          "title": "Given the users api",
+          "uuid": "ed81ef94-3b6d-416a-9d0f-de321e31c01e",
+          "title": "My First Test",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
-          "tests": [],
-          "suites": [
+          "tests": [
             {
-              "uuid": "d1e3aef2-f65e-4b8e-989d-727e199e3413",
-              "title": "When I send GET /usuarios",
-              "fullFile": "",
-              "file": "",
-              "beforeHooks": [],
-              "afterHooks": [],
-              "tests": [
-                {
-                  "title": "Then it should return a list with all registered users",
-                  "fullTitle": "Given the users api When I send GET /usuarios Then it should return a list with all registered users",
-                  "timedOut": null,
-                  "duration": 3999,
-                  "state": "passed",
-                  "speed": "fast",
-                  "pass": true,
-                  "fail": false,
-                  "pending": false,
-                  "context": null,
-                  "code": "cy.api({\n  method: \"GET\",\n  url: \"/usuarios\"\n}).should(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.quantidade).to.eq(response.body.usuarios.length);\n  Cypress._.each(response.body.usuarios, usuario => {\n    expect(usuario.email).to.not.be.null;\n    expect(usuario).to.have.all.keys(\"nome\", \"email\", \"password\", \"administrador\", \"_id\");\n  });\n});",
-                  "err": {},
-                  "uuid": "cde48e99-fa8c-461a-b685-4755c42f5982",
-                  "parentUUID": "d1e3aef2-f65e-4b8e-989d-727e199e3413",
-                  "isHook": false,
-                  "skipped": false
-                }
-              ],
-              "suites": [],
-              "passes": [
-                "cde48e99-fa8c-461a-b685-4755c42f5982"
-              ],
-              "failures": [],
-              "pending": [],
-              "skipped": [],
-              "duration": 3999,
-              "root": false,
-              "rootEmpty": false,
-              "_timeout": 2000
-            },
-            {
-              "uuid": "0162876d-d45a-44f0-be4c-2e5b30858f66",
-              "title": "When I send GET /usuarios passing id query param",
-              "fullFile": "",
-              "file": "",
-              "beforeHooks": [],
-              "afterHooks": [],
-              "tests": [
-                {
-                  "title": "Then it should return only the filtered user",
-                  "fullTitle": "Given the users api When I send GET /usuarios passing id query param Then it should return only the filtered user",
-                  "timedOut": null,
-                  "duration": 127,
-                  "state": "passed",
-                  "speed": "fast",
-                  "pass": true,
-                  "fail": false,
-                  "pending": false,
-                  "context": null,
-                  "code": "cy.api({\n  method: \"GET\",\n  url: \"/usuarios\",\n  qs: {\n    _id: \"0uxuPY0cbmQhpEz1\"\n  }\n}).should(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body.usuarios[0].nome).to.eq(\"Fulano da Silva\");\n});",
-                  "err": {},
-                  "uuid": "c427dfc7-0bb5-4566-a3cc-68742eea5584",
-                  "parentUUID": "0162876d-d45a-44f0-be4c-2e5b30858f66",
-                  "isHook": false,
-                  "skipped": false
-                }
-              ],
-              "suites": [],
-              "passes": [
-                "c427dfc7-0bb5-4566-a3cc-68742eea5584"
-              ],
-              "failures": [],
-              "pending": [],
-              "skipped": [],
-              "duration": 127,
-              "root": false,
-              "rootEmpty": false,
-              "_timeout": 2000
+              "title": "Does not do much!",
+              "fullTitle": "My First Test Does not do much!",
+              "timedOut": null,
+              "duration": 41,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "expect(true).to.equal(true);",
+              "err": {},
+              "uuid": "3790b2a7-7656-4720-a2e8-0d1176a9eeb6",
+              "parentUUID": "ed81ef94-3b6d-416a-9d0f-de321e31c01e",
+              "isHook": false,
+              "skipped": false
             }
           ],
-          "passes": [],
+          "suites": [],
+          "passes": [
+            "3790b2a7-7656-4720-a2e8-0d1176a9eeb6"
+          ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 0,
+          "duration": 41,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

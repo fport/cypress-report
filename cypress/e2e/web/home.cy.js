@@ -3,6 +3,7 @@
 const IDDAA_URL = "https://www.iddaa.com/";
 
 describe("Homepage-tests-web", () => {
+    
     it("should have title on iddaa home page", () => {
         cy.visit("/");
         const title = cy.title();
@@ -75,6 +76,11 @@ describe("Homepage-tests-web", () => {
         button.click();
         cy.url().should("include", "/program/canli/futbol");
     });
+
+    it('Does not do much!', () => {
+    expect(true).to.equal(true)
+  })
+       
 
 });
 
